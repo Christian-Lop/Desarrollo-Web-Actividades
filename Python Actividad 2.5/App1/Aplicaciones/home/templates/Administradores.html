@@ -1,0 +1,29 @@
+{% extends 'base_2.html' %}
+{%block titulo%} Administradores {% endblock%}
+
+{%block titulo_uno%} <strong>Tabla 1.</strong> {% endblock%}
+{%block Datos_uno%} Datos de Administradores {% endblock%}
+
+{%block Texto_uno%} 
+<strong>Bienvenido a la tabla de Administradores</strong>
+<div class="table-responsive">
+    <div class="container-fluid">
+        <table class="table table-hover table-bordered table-sm">
+            <tbody>
+                <tr>
+                    <th class="tablas">Nombre</th>                    
+                    <th class="tablas">Carnet</th>
+                    <th class="tablas">Carnet</th>
+                    
+                </tr>
+                {% for admin in object_list %}
+                <tr>
+                    <td class="contenido">{{ admin.nombre }}</td>                    
+                    <td class="contenido">{{ admin.carnet }}</td>
+                    <td class="contenido">{{ admin.carnet }}</td>                   
+                </tr>
+                {% endfor %}
+            </tbody>                
+        </table>
+    </div>            
+{% endblock%}
